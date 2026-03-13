@@ -10,7 +10,15 @@ const rawSiteName = urlParams.get('site') || 'Default-Customer';
 const siteDisplayName = rawSiteName.replace(/-/g, ' '); // Makes "Deepak-Solar" look like "Deepak Solar"
 const appId = `astha-${rawSiteName.toLowerCase().replace(/\s+/g, '-')}`;
 
-const firebaseConfig = JSON.parse(__firebase_config);
+const firebaseConfig = {
+  apiKey: "AIzaSyAV3EU_Nx-3N0iYmGw6wegB8YUI6usGDdQ",
+  authDomain: "astha-solar.firebaseapp.com",
+  projectId: "astha-solar",
+  storageBucket: "astha-solar.firebasestorage.app",
+  messagingSenderId: "46017295569",
+  appId: "1:46017295569:web:77798ee0259461ff8141f0"
+};
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
